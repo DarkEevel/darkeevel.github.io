@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>kruemelmann's website</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="icon" type="image/png" href="/assets/favicon.png"/>
+</head>
+
+    <body>
+        <header>
+    <nav>
+    <div class="logo">
+        <a href="/">
+            kruemelmann
+        </a>
+    </div>
+    <ul class="navbar">
+        
+            <li class="navbar-item">
+                <a href="/" >
+                    Home
+                </a>
+            </li>
+        
+            <li class="navbar-item">
+                <a href="/blog.html" >
+                    Blog
+                </a>
+            </li>
+        
+            <li class="navbar-item">
+                <a href="/about.html" >
+                    About
+                </a>
+            </li>
+        
+        
+            <li class="navbar-item sozials">
+                <a href="https://github.com/Kruemelmann"
+                    
+                       class="fa fa-github"
+                    
+                    >
+                </a>
+            </li>
+        
+            <li class="navbar-item sozials">
+                <a href="https://twitter.com/kruemlmann"
+                    
+                    
+                       class="fa fa-twitter"
+                    >
+                </a>
+            </li>
+        
+    </ul>
+</nav>
+
+</header>
+
+        <div class="main-content">
+            
+                <!-- stars container -->
+<canvas id="stars-container">
+</canvas>
+
+<!-- import wasm scripts -->
+<!-- Scripts(wasm) -->
+<script src="https://golang.org/misc/wasm/wasm_exec.js"></script>
+
+<script type="text/javascript">
+    async function run(fileUrl) {
+        try {
+            const file = await fetch(fileUrl);
+            const buffer = await file.arrayBuffer();
+            const go = new Go();
+            const { instance } = await WebAssembly.instantiate(buffer, go.importObject);
+            go.run(instance);
+        } catch (err) {
+            console.error(err);
+        }
+    }
+    setTimeout(() => run("/assets/wasm/game.wasm"));
+</script>
+
+
+<div class="headline">
+    <h1 class="headline-item">welcome</h1>
+    <span class="headline-item">to my little website playground</span>
+</div>
+
+<!-- cards -->
+<h2>latest blog posts</h2>
+<div class="card-container">
+    
+    <div class="card">
+        <div class="container">
+            <h4><b><a href="/2021/11/25/building-cobra-cli.html">building a cobra-based cli (based on factories)</a></b></h4>
+            <h5>November 25, 2021</h5>
+            <p><p>TODO write about how to build cobra cli with factories instead of using the init functions</p>
+</p>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="container">
+            <h4><b><a href="/2021/11/19/tmux-iconbar.html">tmux-iconbar</a></b></h4>
+            <h5>November 19, 2021</h5>
+            <p><p>TODO write what the hell tmux-iconbar is and how it works</p>
+</p>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="container">
+            <h4><b><a href="/2021/11/19/pathfind.vim.html">pathfind.vim</a></b></h4>
+            <h5>November 19, 2021</h5>
+            <p><p>TODO write what the hell pathfind.vim is and how it works</p>
+</p>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="container">
+            <h4><b><a href="/2021/11/19/jekyll-setup.html">jekyll-setup</a></b></h4>
+            <h5>November 19, 2021</h5>
+            <p><p>TODO: describe the jekyll setup with github actions</p>
+</p>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="container">
+            <h4><b><a href="/2021/11/18/welcome.html">welcome to my new blog :)</a></b></h4>
+            <h5>November 18, 2021</h5>
+            <p><p>In this blog i am going to write some stuff about my projects on github
+and document some ideas.</p>
+</p>
+        </div>
+    </div>
+    
+</div>
+
+
+            
+            
+        </div>
+    </body>
+    <footer>
+    <ul style="list-style-type: none;">
+        
+            <li class="navbar-item sozials" style="float: right;">
+                <a href="https://github.com/Kruemelmann"
+                    
+                       class="fa fa-github"
+                    
+                    >
+                </a>
+            </li>
+        
+            <li class="navbar-item sozials" style="float: right;">
+                <a href="https://twitter.com/kruemlmann"
+                    
+                    
+                       class="fa fa-twitter"
+                    >
+                </a>
+            </li>
+        
+    </ul>
+</footer>
+
+    
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</html>
