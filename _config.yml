@@ -4,7 +4,7 @@ plugins:
   - jekyll-feed
 
 
-domain: kruemelmann.github.io # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
-url: https://kruemelmann.github.io  # the base hostname and protocol for your site, e.g. http://example.com
+domain: darkeevel.github.io # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+url: https://darkeevel.github.io  # the base hostname and protocol for your site, e.g. http://example.com
 baseurl: ""
-repository: kruemelmann/kruemelmann.github.io
+repository: darkeevel/darkeevel.github.io
